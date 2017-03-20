@@ -3,7 +3,7 @@
 namespace Acidreign\LaravelGeoIP2;
 
 use Illuminate\Support\ServiceProvider;
-use Acidreign\LaravelGeoIP2\Console\UpdateCommand;
+//use Acidreign\LaravelGeoIP2\Console\UpdateCommand;
 
 class GeoIP2ServiceProvider extends ServiceProvider
 {
@@ -35,12 +35,12 @@ class GeoIP2ServiceProvider extends ServiceProvider
         $this->app['geoip2'] = $this->app->share(function ($app) {
             return new GeoIP2($app['config'], $app['request']);
         });
-
+/*
         $this->app['command.geoip2.update'] = $this->app->share(function ($app) {
             return new UpdateCommand($app['config']);
         });
-
         $this->commands(array('command.geoip2.update'));
+*/
     }
 
     /**
@@ -50,6 +50,6 @@ class GeoIP2ServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return array('geoip2', 'command.geoip2.update');
+        return array('geoip2'/*, 'command.geoip2.update'*/);
     }
 }
