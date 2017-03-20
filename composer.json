@@ -1,5 +1,5 @@
 {
-    "name": "acidreign/laravel-geoip2",
+    "name": "littio/laravel-geoip2",
     "description": "Laravel wrapper for MaxMind GeoIP2",
     "keywords": [
         "laravel",
